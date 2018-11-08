@@ -7,7 +7,7 @@ class Student
   def initialize(student_hash)
     # metaprogramming to create all attributes in hash that is passed in
     student = Student.new
-    student_hash.each {|k,v| student.send("#{k}"=,v)}
+    student_hash.each {|k,v| student.send("#{k}=",v)}
     @@all << student
 
   end
